@@ -1,0 +1,431 @@
+.boardprheader__team {
+    .boardprheader__title {
+        margin-right: 50px;
+    }
+
+    .boardprheader__inputbox {
+        max-width: 300px;
+    }
+
+
+}
+
+.teamroles {
+    width: 110px;
+    position: relative;
+
+    span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        border: 1.3px solid #EDEAE9;
+        width: 100%;
+        height: 32px;
+        color: #647CA1;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+
+        svg {
+            transition: 0.3s;
+            margin-left: 11px;
+
+            path {
+                transition: .3s;
+            }
+        }
+
+        &:hover {
+            border-color: #647CA1;
+        }
+
+        &.active {
+            border-color: #F58220;
+            color: #F58220;
+
+            svg {
+                transform: rotate(180deg);
+
+                path {
+                    stroke: #F58220;
+                }
+            }
+        }
+    }
+}
+
+.teamroles__list {
+    width: 166px;
+    background: #fff;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.11);
+    border-radius: 9px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 3px);
+    z-index: 3;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.teamroles__checkblock {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    input {
+        display: none;
+
+        &:checked+label {
+            &::before {
+                background-color: #F58220;
+                border-color: #F58220;
+                background-image: url('../img/checkwhite.png');
+                background-repeat: no-repeat;
+                background-size: 9px;
+                background-position: center;
+            }
+        }
+    }
+
+    label {
+        display: block;
+        color: #2C4469;
+        font-size: 15px;
+        line-height: 160%;
+        padding-left: 23px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-color: #F9F9F9;
+            border: 1px solid #C3C6D5;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
+
+.boardprheader__groupsect {
+    .addpeoplebtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        width: 143px;
+        height: 38px;
+        background: #F58220;
+        border-radius: 29px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 100%;
+        margin-right: 50px;
+    }
+}
+
+// table
+.boardprbody.boardprbody__team {
+    padding-right: 139px;
+}
+
+.table-wrapper {
+    padding-left: 100px;
+    padding-top: 10px;
+
+    thead {
+        border-bottom: 2.2px solid #EDEAE9;
+
+        tr {
+            th {
+                color: #10284D;
+                font-size: 15px;
+                line-height: 160%;
+                font-weight: 500;
+
+                img {
+                    margin-left: 9px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        border-bottom: 2.2px solid #EDEAE9;
+
+        tr:first-child {
+            td {
+                padding-top: 20px;
+            }
+        }
+
+        tr:last-child {
+            td {
+                padding-bottom: 20px;
+            }
+        }
+
+        td {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        .team__name {
+            color: #10284D;
+            font-size: 15px;
+            line-height: 140%;
+            font-weight: 500;
+            width: 33%;
+
+            .circle {
+                margin-right: 11px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 39px;
+                flex: 0 0 39px;
+                height: 39px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 14.808px;
+
+                &.red {
+                    background: #FB5C5C;
+                }
+
+                &.orange {
+                    background: #F58220;
+                }
+
+                &.blue {
+                    background: #5CA1FB;
+                }
+
+                &.yellow {
+                    background: #FFC233;
+                }
+
+                &.violet {
+                    background: #855CFB;
+                }
+            }
+
+            .name {
+                width: 100%;
+                max-width: calc(100% - 39px);
+                flex: 0 0 calc(100% - 39px);
+            }
+        }
+
+        .team__email {
+            color: #10284D;
+            font-size: 14px;
+            line-height: 160%;
+            width: calc(67% - 325px);
+        }
+
+        .team__role {
+            width: 325px;
+
+            a {
+                color: #F58220;
+                text-decoration: none;
+                font-size: 15px;
+                line-height: 160%;
+                font-weight: 500;
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+.sortbyname {
+    cursor: pointer;
+}
+
+.table-wrapper tbody .team__name .name {
+
+    i,
+    a {
+        font-size: 13px;
+        display: block;
+        font-weight: 400;
+        opacity: 0.7;
+        text-decoration: none;
+        color: #10284D;
+    }
+}
+
+.boardcolumn__dotsmenu.boardcolumn__dotsmenu-team {
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+    
+
+    .boardcolumn__list {
+        text-align: left;
+        width: 170px;
+        z-index: 13;
+
+        ul li {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: #2C4469;
+                font-size: 14px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width:1400.8px) {
+    .table-wrapper {
+        padding-left: 0;
+    }
+
+    .boardprbody.boardprbody__team {
+        padding-right: 50px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .table-wrapper tbody tr:not(:last-child) td {
+        padding-right: 5px;
+    }
+
+    .boardprheader__team .boardprheader__title {
+        margin-right: 20px;
+    }
+
+    .boardprheader__team .boardprheader__inputbox {
+        max-width: 200px;
+    }
+
+    .table-wrapper {
+        min-width: 840px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .boardprheader__groupsect .addpeoplebtn {
+        margin-right: 20px;
+    }
+
+    .boardprheader__team .boardprheader__inputbox {
+        max-width: 300px;
+        margin: 0 0 10px 0;
+    }
+
+    .boardprbody.boardprbody__team {
+        height: calc(100vh - 175px);
+    }
+}
+
+@media(max-width:767.8px) {
+    .boardprheader__team .boardprheader__inputbox {
+        margin-bottom: 0;
+    }
+
+    .table-wrapper {
+        min-width: initial;
+        width: 100%;
+
+        table {
+            width: 800px;
+        }
+    }
+
+    .boardprbody.boardprbody__team {
+        height: calc(100vh - 175px);
+
+        .table-wrapper {
+            // display: none;
+        }
+    }
+}
+
+@media(max-width:575.8px) {
+
+    .boardprheader__groupsect .addpeoplebtn {
+        height: 32px;
+        width: 120px;
+    }
+
+    .boardprheader__team .boardprheader__inputbox {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .teamroles__list {
+        right: initial;
+        left: 0;
+    }
+
+    .table-wrapper tbody .team__name {
+        font-size: 14px;
+    }
+
+    .table-wrapper tbody .team__name .circle {
+        margin-right: 6px;
+    }
+
+    .table-wrapper tbody td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .table-wrapper table {
+        width: 700px;
+    }
+
+    table .genselect .select2-container {
+        width: 160px !important;
+        max-width: 200px;
+    }
+
+    .boardprbody.boardprbody__team {
+        height: calc(100vh - 198px);
+    }
+
+    .table-wrapper tbody .team__name {
+        width: 40%;
+    }
+
+    .table-wrapper tbody .team__role {
+        width: 235px;
+        padding-right: 20px !important;
+    }
+
+    .table-wrapper tbody .team__email {
+        width: calc(60% - 235px);
+    }
+}

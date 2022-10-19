@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'gothamrnd_bookrounded';
+    src: url('../fonts/GothamRoundedMedium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'gothamrnd_bookrounded';
+    src: url('../fonts/GothamRounded-Book.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'gothamrnd_bookrounded';
+    src: url('../fonts/GothamRoundedLight.otf');
+    font-weight: 300;
+}
+
+:root {
+    scroll-behavior: inherit;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.pagewrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'gothamrnd_bookrounded';
+    color: #10284D;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.orangebtn {
+    width: 194px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #F58220;
+    border-radius: 40px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 500;
+
+    &:hover {
+        background: #ff7500;
+        color: #fff;
+        box-shadow: 0 10px 10px #ffdfc3;
+    }
+
+    &.white {
+        background: #fff;
+        color: #F58220;
+        border: 2px solid #F58220;
+    }
+
+    &.back {
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    &.hover-white {
+        &:hover {
+            box-shadow: none !important;
+            background: #fff;
+            color: #ff7500;
+        }
+    }
+}
+
+@media(max-width:575.8px) {
+    .orangebtn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .tablethide {
+        display: none;
+    }
+}
+
+// icons
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icons/icomoon.eot?w8yi7z');
+    src: url('../fonts/icons/icomoon.eot?w8yi7z#iefix') format('embedded-opentype'),
+        url('../fonts/icons/icomoon.ttf?w8yi7z') format('truetype'),
+        url('../fonts/icons/icomoon.woff?w8yi7z') format('woff'),
+        url('../fonts/icons/icomoon.svg?w8yi7z#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-addproject:before {
+    content: "\e903";
+    color: #7b879b;
+}
+
+.icon-Group-35161:before {
+    content: "\e902";
+    color: #6981a6;
+}
+
+.icon-board-icon:before {
+    content: "\e900";
+    color: #445c81;
+}
+
+.icon-team-icon:before {
+    content: "\e901";
+    color: #445c81;
+}

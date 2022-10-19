@@ -1,0 +1,590 @@
+.signstepwrapper {
+    position: relative;
+
+    .signstepcontent__bg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .signstepcontent__bg2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.container-signheader {
+    padding: 0 90px;
+}
+
+// sign steps header
+.signheader {
+    padding-top: 30px;
+
+    .logo img {
+        max-width: 170px;
+    }
+}
+
+.signheader__breadcrumb {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 58px;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                right: -41px;
+                top: 4px;
+                background: url('../img/arrow-breadcrumb.svg') no-repeat center / 100%;
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            a {
+                color: #B7B7B7;
+                text-decoration: none;
+                font-size: 18px;
+                line-height: 160%;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #10284C;
+                }
+            }
+
+            &.active {
+                a {
+                    color: #10284C;
+                }
+            }
+        }
+    }
+}
+
+// sign steps body
+.signstepcontent {
+    padding: 80px 0 100px;
+    min-height: calc(100vh - 103px);
+
+    h1 {
+        margin-bottom: 80px;
+    }
+}
+
+.signsteph1 {
+    font-size: 46px;
+    line-height: 120%;
+    color: #10284D;
+    font-weight: 500;
+
+    span {
+        color: #F58220;
+    }
+}
+
+// job box (inp type radio)
+.jobboxwrap {
+    input {
+        display: none;
+
+        &:checked {
+            &+.jobbox {
+                border-color: #F58220;
+                color: #F58220;
+
+                svg {
+                    path {
+                        stroke: #F58220;
+                    }
+
+                    circle {
+                        stroke: #F58220;
+                    }
+                }
+            }
+        }
+    }
+
+    .jobbox {
+        height: 82px;
+        border: 2px solid #C3C6D5;
+        border-radius: 15px;
+        color: #9A9DAC;
+        font-size: 18px;
+        line-height: 160%;
+        font-weight: 500;
+        transition: 0.3s;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background: #fff;
+
+        &:hover {
+            box-shadow: 0 10px 10px #e7eef3;
+        }
+
+        svg {
+            margin-left: 10px;
+
+            path,
+            circle {
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+.signstep-bottsect {
+    padding-top: 40px;
+}
+
+// Main purpose - page
+.signleftsect {
+    .signleftsect__content {
+        max-width: 551px;
+
+        .signsteph1 {
+            margin-bottom: 15px;
+        }
+
+        .descr {
+            font-size: 18px;
+            line-height: 160%;
+            color: #10284D;
+            margin: 0;
+        }
+    }
+
+    .mainpurposewrapp {
+        margin-top: 35px;
+        margin-bottom: 45px;
+    }
+}
+
+.signrightpicwrapper {
+    padding-top: 50px;
+}
+
+.mainpurposewrapp {
+    max-width: 434px;
+
+    .mainpurpose {
+        margin-bottom: 23px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.mainpurpose {
+
+    input {
+        display: none;
+
+        &:checked+.mainpurpose__label {
+            border: 1.4px solid #F58220;
+        }
+    }
+
+    .mainpurpose__label {
+        cursor: pointer;
+        border: 1.4px solid transparent;
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .mainpurpose__img {
+        width: 100%;
+        max-width: 62px;
+        flex: 0 0 62px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .mainpurpose__textbox {
+        width: 100%;
+        max-width: calc(100% - 62px);
+        flex: 0 0 calc(100% - 62px);
+        padding-left: 15px;
+    }
+
+    .mainpurpose__title {
+        margin-bottom: 6px;
+        color: #10284D;
+        font-size: 19px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+
+    .mainpurpose__descr {
+        margin: 0;
+        font-size: 16px;
+        line-height: 160%;
+    }
+}
+
+.mainpurpose__btnsgroups {
+    max-width: 420px;
+}
+
+// step 3
+.signleftsect.ptbit {
+    padding-top: 110px;
+}
+
+.signform {
+    max-width: 460px;
+
+    p {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+
+    .orangebtn {
+        margin-top: 60px;
+    }
+}
+
+.projectid {
+    color: #10284D;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+
+    input {
+        border: none;
+        outline: none;
+        color: rgba(68, 92, 129, 0.57);
+        margin-left: 6px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: rgba(68, 92, 129, 0.57);
+        }
+    }
+
+    &+.orangebtn {
+        margin-top: 28px;
+    }
+}
+
+
+// step 4
+.inputfield.inputfield__check {
+    input {
+        padding-left: 58px;
+
+        &:focus {
+            &+.checkicon {
+                svg {
+                    path {
+                        transition: 0.3s;
+                        stroke: #F58220;
+                    }
+
+                    circle {
+                        transition: 0.3s;
+                        stroke: #F58220;
+                    }
+                }
+            }
+        }
+    }
+
+    .checkicon {
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+        display: flex;
+
+        svg {
+            path {
+                transition: 0.3s;
+                stroke: #AAABB1;
+            }
+
+            circle {
+                transition: 0.3s;
+                stroke: #AAABB1;
+            }
+        }
+    }
+}
+
+.btnsgroup {
+    margin-top: 60px;
+
+    .orangebtn {
+        margin-top: 0;
+    }
+}
+
+@media(max-width:1600.8px) {
+    .signsteph1 {
+        font-size: 42px;
+    }
+
+    .signstepcontent h1 {
+        margin-bottom: 40px;
+    }
+
+    .jobboxwrap .jobbox {
+        line-height: 140%;
+    }
+
+    .signform p {
+        font-size: 21px;
+    }
+
+    .signleftsect.ptbit {
+        padding-top: 80px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+    .container-signheader {
+        padding: 0 30px;
+    }
+
+    .signstep-bottsect {
+        padding-top: 20px;
+    }
+
+    .signleftsect.ptbit {
+        padding-top: 40px;
+    }
+
+    .signform p {
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:991.8px) {
+    .signheader .logo img {
+        max-width: 140px;
+    }
+
+    .signheader__breadcrumb ul li a {
+        font-size: 16px;
+    }
+
+    .signheader__breadcrumb ul li:after {
+        top: 2px;
+    }
+
+    .signsteph1 {
+        font-size: 36px;
+    }
+
+    .signleftsect .signleftsect__content,
+    .mainpurposewrapp,
+    .mainpurpose__btnsgroups {
+        max-width: 100%;
+    }
+
+    .signform {
+        max-width: 100%;
+    }
+}
+
+@media(max-width:767.8px) {
+    .signheader {
+        .col-md-8 {
+            order: 2;
+        }
+
+        .col-md-4 {
+            order: 1;
+        }
+    }
+
+    .signheader__breadcrumb {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .container-signheader {
+        padding: 0 15px;
+    }
+
+    .signheader {
+        padding-top: 10px;
+
+        .logo img {
+            max-width: 100px;
+        }
+    }
+
+    .signheader__breadcrumb ul li {
+        margin-right: 40px;
+
+        a {
+            font-size: 14px;
+        }
+
+        &::after {
+            width: 16px;
+            height: 16px;
+            top: 4px;
+            right: -30px;
+        }
+    }
+
+    .signstepcontent {
+        padding: 40px 0 60px;
+    }
+
+    .signsteph1 {
+        font-size: 28px;
+    }
+
+    .jobboxwrap .jobbox {
+        height: 60px;
+        font-size: 15px;
+        font-weight: 400;
+        border-width: 1px;
+        margin-bottom: 15px;
+    }
+
+    .chooseproff {
+        .row {
+            margin-left: -8px;
+            margin-right: -8px;
+
+            .col-6 {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+    }
+
+    .mainpurpose .mainpurpose__title {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .mainpurpose .mainpurpose__descr {
+        font-size: 14px;
+    }
+
+    .mainpurpose .mainpurpose__img {
+        max-width: 50px;
+        flex: 0 0 50%;
+    }
+
+    .mainpurpose .mainpurpose__textbox {
+        max-width: calc(100% - 50px);
+        flex: 0 0 calc(100% - 50px);
+    }
+
+    .mainpurpose .mainpurpose__label {
+        padding: 10px;
+    }
+
+    .mainpurpose__btnsgroups {
+        .orangebtn {
+            width: 100%;
+            max-width: calc(50% - 10px);
+        }
+    }
+
+    .signstepwrapper .signstepcontent__bg2 {
+        display: none;
+    }
+
+    .signleftsect .mainpurposewrapp {
+        margin-top: 20px;
+    }
+
+    .mainpurposewrapp .mainpurpose {
+        margin-bottom: 15px;
+    }
+
+    .signleftsect.ptbit {
+        padding-top: 0;
+    }
+
+    .signform .orangebtn {
+        margin-top: 40px;
+    }
+
+
+    .signleftsect .signleftsect__content .descr,
+    .signform p {
+        font-size: 16px;
+    }
+
+    .projectid {
+        font-size: 14px;
+
+        input {
+            font-size: 14px;
+        }
+    }
+
+    .btnsgroup .orangebtn {
+        margin-top: 0;
+        max-width: calc(50% - 10px);
+        width: 100%;
+    }
+
+    .inputfield.inputfield__check {
+        input {
+            padding-left: 50px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        .checkicon {
+            left: 25px;
+            bottom: 18px;
+        }
+    }
+
+    .btnsgroup {
+        margin-top: 40px;
+    }
+
+    .signsteph1 br {
+        display: none;
+    }
+
+
+}

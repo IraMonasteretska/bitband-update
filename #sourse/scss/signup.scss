@@ -1,0 +1,524 @@
+.signwrapper__form,
+.signwrapper__img {
+    min-height: 100vh;
+}
+
+// sign form
+.signwrapper__form {
+    width: 100%;
+    max-width: 54%;
+    flex: 0 0 54%;
+    padding: 50px;
+
+    .signformwrap {
+        max-width: 470px;
+        margin: 0 auto;
+        width: 100%;
+
+        h1 {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 120%;
+            color: #10284D;
+
+            span {
+                color: #F58220;
+            }
+        }
+
+        p.subtitle {
+            color: #10284D;
+            margin-bottom: 50px;
+            font-size: 16px;
+            line-height: 160%;
+        }
+    }
+
+    .signform {
+        .signform__btn {
+            margin: 40px 0;
+        }
+    }
+}
+
+// sign up - right sect
+.signwrapper__img {
+    width: 100%;
+    max-width: 46%;
+    flex: 0 0 46%;
+    background: linear-gradient(282.05deg, #009FFD -82.54%, #2A2A72 115.63%);
+
+    .signstar1,
+    .signstar2 {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .signstar1 {
+        right: 0;
+        bottom: 0;
+    }
+
+    .signstar2 {
+        top: 0;
+        left: 0;
+    }
+}
+
+.signlogo {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    right: 93px;
+}
+
+// input field
+.inputfield {
+    margin-bottom: 25px;
+    position: relative;
+
+    label {
+        color: #10284D;
+        margin-bottom: 9px;
+        font-size: 18px;
+        line-height: 160%;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    input {
+        outline: none;
+        border-radius: 53px;
+        border: 2px solid #DBDCE2;
+        transition: 0.3s;
+        height: 59px;
+        padding-left: 30px;
+        font-size: 18px;
+        line-height: 160%;
+        color: #000;
+
+        &::placeholder {
+            color: #AAABB1;
+        }
+
+        &:focus {
+            border-color: #F58220;
+            box-shadow: none;
+
+            &+label+.togglepass {
+                opacity: 1;
+
+                &>svg {
+                    path {
+                        fill: #F58220;
+
+                        &:last-child {
+                            stroke: #F58220;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .togglepass {
+        position: absolute;
+        right: 30px;
+        bottom: 18px;
+        opacity: 0.25;
+        cursor: pointer;
+        transition: 0.3s;
+
+        svg {
+            path {
+                transition: 0.3s;
+            }
+        }
+
+        &.active {
+            svg {
+                path {
+                    &:last-child {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+
+            svg {
+                path {
+                    fill: #F58220;
+
+                    &:last-child {
+                        stroke: #F58220;
+                    }
+                }
+            }
+        }
+    }
+
+    &.reverse {
+        display: flex;
+        flex-wrap: wrap;
+
+        input {
+            order: 2;
+
+            &:focus+label {
+                color: #F58220;
+            }
+        }
+
+        label {
+            order: 1;
+        }
+    }
+}
+
+// sign up - submit 
+
+.signform__btn {
+    input {
+        width: 220px;
+        height: 59px;
+        background: #F58220;
+        border-radius: 40px;
+        border: none;
+        padding: 0;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 100%;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+            background: #ff7500;
+        }
+    }
+}
+
+// sign with
+.signform__createwith {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            font-size: 18px;
+            line-height: 160%;
+            color: #AAABB1;
+
+            img {
+                max-width: 47px;
+                transition: 0.3s;
+            }
+
+            a {
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+// ================================== LOGIN PAGE
+.remembersect {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+
+    .remembersect__remember {
+        width: 100%;
+        max-width: 40%;
+        flex: 0 0 40%;
+
+        input {
+            display: none;
+
+            &:checked+label::after {
+                background: url('../img/check-orange.svg') no-repeat center / 13px;
+            }
+        }
+
+        label {
+            display: block;
+            color: #8C8D93;
+            font-size: 15px;
+            line-height: 160%;
+            padding-left: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: #10284D;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                border: 1.4px solid #93949A;
+                border-radius: 3px;
+                position: absolute;
+                left: 0;
+                top: 3px;
+            }
+        }
+    }
+
+    .remembersect__forgotpass {
+        width: 100%;
+        max-width: 60%;
+        flex: 0 0 60%;
+
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 160%;
+            color: #F58220;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.signform__btn {
+    &.signform__btn-fullwidth {
+        margin: 35px 0 25px;
+
+        input {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.signform__createwith {
+    p {
+        margin-bottom: 30px;
+
+        span {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #C4C4C4;
+            display: inline-block;
+            background: #fff;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right,
+                    transparent 5%, #C4C4C4 20% 80%, transparent 95%);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.signform__createwith.centerlist {
+    ul {
+        max-width: 294px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1600.8px) {
+    .signwrapper__form .signformwrap {
+        max-width: 460px;
+    }
+
+    .signwrapper__form .signformwrap h1 {
+        font-size: 36px;
+    }
+
+    .signwrapper__form .signformwrap p.subtitle {
+        margin-bottom: 30px;
+    }
+
+    .inputfield input,
+    .signform__btn input {
+        height: 54px;
+    }
+
+    .inputfield {
+        margin-bottom: 20px;
+    }
+
+    .signwrapper__form .signform .signform__btn {
+        margin: 40px 0 30px;
+    }
+
+    .signlogo {
+        top: 30px;
+        right: 60px;
+    }
+
+
+
+    .inputfield label,
+    .inputfield input,
+    .signform__createwith ul li {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .signwrapper {
+        flex-wrap: wrap;
+    }
+
+    .signwrapper__form,
+    .signwrapper__img {
+        max-width: 100%;
+        flex: 0 0 100%;
+        min-height: initial;
+    }
+
+    .signwrapper__img {
+        order: 1;
+
+        .signmainpic {
+            max-width: 300px;
+        }
+    }
+
+    .signwrapper__form {
+        order: 2;
+    }
+
+    .signlogo {
+        top: 20px;
+        right: 40px;
+    }
+
+}
+
+@media(max-width:575.8px) {
+    .signlogo {
+        right: 15px;
+        top: 10px;
+
+        img {
+            max-width: 100px;
+        }
+    }
+
+    .signwrapper__img {
+        padding: 30px 0 10px;
+
+        .signmainpic {
+            max-width: 200px;
+        }
+
+        .signstar1 {
+            max-width: 150px;
+        }
+
+        .signstar2 {
+            max-width: 100px;
+        }
+    }
+
+    .signwrapper__form {
+        padding: 30px 15px;
+    }
+
+    .signwrapper__form .signformwrap h1 {
+        font-size: 26px;
+    }
+
+    .signwrapper__form .signformwrap p.subtitle {
+        font-size: 14px;
+    }
+
+    .inputfield input {
+        padding-left: 20px;
+    }
+
+    .inputfield label {
+        margin-bottom: 5px;
+    }
+
+    .signform__btn input {
+        font-size: 16px;
+    }
+
+    .signform__createwith ul li {
+        font-size: 14px;
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    .signwrapper__form .signform .signform__btn {
+        margin: 30px 0 20px;
+    }
+
+    // login
+    .remembersect .remembersect__remember,
+    .remembersect .remembersect__forgotpass {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .remembersect {
+        margin-bottom: 20px;
+
+        .remembersect__remember {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+}
