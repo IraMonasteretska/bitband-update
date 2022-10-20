@@ -389,30 +389,33 @@ $(document).ready(function () {
 
 
     // new
-
-    $('#input-tags').selectize({
-        delimiter: ',',
-        persist: false,
-        create: function (input) {
-            return {
-                value: input,
-                text: input
+    if($('#input-tags').length) {
+        $('#input-tags').selectize({
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            },
+            plugins: ['remove_button'],
+            createOnBlur: true,
+            create: true,
+            onItemAdd: function () {
+                $('.tagssection__colors').show();
+    
+                $(".selectize-control.multi .selectize-input>div").tooltip({
+                    placement: "bottom", // position
+                    title: "Click to view all tasks from the list"
+                });
+            },
+            onItemRemove: function() {
+                $('.tooltip').tooltip('hide');
             }
-        },
-        plugins: ['remove_button'],
-        createOnBlur: true,
-        create: true,
-        onItemAdd: function () {
-            $('.tagssection__colors').show();
-
-            $(".selectize-control.multi .selectize-input>div").tooltip({
-                placement: "bottom", // position
-                title: "Click to view all tasks from the list"
-            });
-        },
-
-
-    });
+        });
+    }
+    
 
     
 
@@ -469,6 +472,12 @@ $(document).ready(function () {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
+    
+    // $(document).on('mouseleave', '.item', function(){
+    //     console.log('sdsd');
+    //     $('tooltip').remove();
+    // });
+
     // -----------------------
     $(document).click(function (e) {
         let $target = $(e.target);
@@ -478,6 +487,8 @@ $(document).ready(function () {
             } else {
                 $('.selectize-input').removeClass('border');
             }
+        } else {
+            $('.selectize-input').removeClass('border');
         }
        
     });

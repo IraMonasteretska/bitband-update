@@ -81,11 +81,15 @@
     border-radius: 10px !important;
     max-width: 100%;
 
-    
+
     &.border {
         // padding-left: 0 !important;
         border-color: transparent !important;
     }
+}
+
+.selectize-input.items.not-full.border focus {
+    border: 1px solid #F58220;
 }
 
 .selectize-dropdown {
@@ -202,27 +206,6 @@
     }
 }
 
-.tooltip-inner {
-    background: #FFFFFF !important;
-    border: 1.5px solid #DBDCE2 !important;
-    color: #10284D !important;
-    font-size: 13px !important;
-    line-height: 130% !important;
-    width: 149px !important;
-}
-
-.tooltip .tooltip-arrow::before {
-    background: url('../img/new/arrowtooltips.png');
-    border: none;
-    width: 14px;
-    height: 8px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.tooltip  {
-    margin-top: 5px !important;
-}
 
 .tagssection__autocomplete {
     background: #fff;
@@ -236,6 +219,7 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
+
         li {
             display: block;
             margin-bottom: 2px;
@@ -254,6 +238,52 @@
     }
 }
 
+.tasksbox__bottsect {
+    .taskidwrapper {
+        width: 100%;
+        max-width: calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px);
+        // display: flex;
+        // align-items: center;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        // white-space: nowrap;
+    }
+
+    .usercirclewrapper {
+        width: 100%;
+        max-width: 20px;
+        flex: 0 0 20px;
+    }
+}
+
+.tagtask {
+    color: #fff;
+    font-size: 9px;
+    line-height: 100%;
+    font-weight: 500;
+    background: #6B83A8;
+    border-radius: 30px;
+    padding: 4px 12px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.taskid {
+    margin-right: 6px;
+}
+
+.tasksbox__bottsect {
+    .tagssection {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .selectize-input {
+        min-height: 17px;
+        padding: 0;
+    }
+}
 
 
 
@@ -264,12 +294,72 @@
 
 
 
+
+
+
+
+
+
+
+
+@media(min-width:768px) {
+
+    .tooltip-inner {
+        background: #FFFFFF !important;
+        border: 1.5px solid #DBDCE2 !important;
+        color: #10284D !important;
+        font-size: 13px !important;
+        line-height: 130% !important;
+        width: 149px !important;
+    }
+
+    .tooltip .tooltip-arrow::before {
+        background: url('../img/new/arrowtooltips.png');
+        border: none;
+        width: 14px;
+        height: 8px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .tooltip {
+        margin-top: 5px !important;
+    }
+}
 
 @media(max-width:991.8px) {
 
+    .tagssection {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .taskmodal__detailslist>li.tagsli .rolerow {
+        padding-top: 0;
+    }
+
+    .taskmodal__details {
+        height: 540px;
+        overflow: auto;
+    }
 
 
+}
 
+@media(max-width:575.8px) {
+    .taskmodal__content {
+        padding-top: 60px;
+    }
+
+    .tooltip .tooltip-arrow:before {
+        background: none;
+        border: initial;
+    }
+
+    .selectize-control.plugin-remove_button .item .remove {
+        padding-left: 3px;
+        margin-left: 10px;
+    }
 
 
 }
