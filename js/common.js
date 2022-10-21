@@ -388,8 +388,8 @@ $(document).ready(function () {
 
 
 
-    // new
-    if($('#input-tags').length) {
+    // Tags
+    if ($('#input-tags').length) {
         $('#input-tags').selectize({
             delimiter: ',',
             persist: false,
@@ -402,48 +402,95 @@ $(document).ready(function () {
             plugins: ['remove_button'],
             createOnBlur: true,
             create: true,
-            onItemAdd: function () {
+            onItemAdd: function (value, $item) {
                 $('.tagssection__colors').show();
-    
+
+                $(".selectize-control.multi .selectize-input>div").tooltip({
+                    placement: "bottom", // position
+                    title: "Click to view all tasks from the list"
+                });
+
+                // color
+                $($item).parents('.tagssection').find('.tagssection__colors').show();
+
+                let colorSpan = $('.tagssection__colorbox span')
+
+                $(colorSpan).click(function(){
+                    let colorTag = $(this).attr("data-color");
+                    $(this).parents('.tagssection').find('.selectize-control .selectize-input input').prev().css('background', colorTag);
+                    // $($item).parents('.tagssection__taskbox').find('.tagssection__colors').hide();
+                })
+            },
+
+            onItemRemove: function () {
+                $('.tooltip').tooltip('hide');
+            },
+            
+        });
+    }
+
+    if ($('.tagsinput').length) {
+        $('.tagsinput').selectize({
+            delimiter: ',',
+            persist: false,
+            create: function (input) {
+                return {
+                    value: input,
+                    text: input
+                }
+            },
+            plugins: ['remove_button'],
+            createOnBlur: true,
+            create: true,
+            onItemAdd: function () {
+                // $('.tagssection__colors').show();
+
                 $(".selectize-control.multi .selectize-input>div").tooltip({
                     placement: "bottom", // position
                     title: "Click to view all tasks from the list"
                 });
             },
-            onItemRemove: function() {
+            onItemRemove: function () {
                 $('.tooltip').tooltip('hide');
+            },
+
+
+
+
+            
+            onItemAdd(value, $item) {
+                $($item).parents('.tagssection__taskbox').find('.tagssection__colors').show();
+
+                let colorSpan = $('.tagssection__colorbox span')
+
+                $(colorSpan).click(function(){
+                    let colorTag = $(this).attr("data-color");
+                    $(this).parents('.tagssection__taskbox').find('.selectize-control .selectize-input input').prev().css('background', colorTag);
+                    // $($item).parents('.tagssection__taskbox').find('.tagssection__colors').hide();
+
+
+                })
+
+
+
+
             }
+
+
+
+            
         });
     }
-    
 
-    
-
-    // $('#input-tags').selectize.on('item_add',function(value, $item){
-    //     console.log("+")
-    //   });
-
-
-
-
-    // $(document).click(function (e) {
-    //     let $targettag = $(e.target);
-    //     if ($targettag.closest('.item').length) {
-    //         $('.item').removeClass('test');
-    //         $($targettag).addClass('test');
-    //     }
-    // });
-
+    // show tags color list
     $(document).on('click', '.selectize-dropdown-content', function () {
         $('.tagssection__colors').show();
-        console.log("+")
     });
 
-
-    $(document).on('click', '.tagssection__colors span', function () {
-        let colorTag = $(this).attr("data-color");
-        $('.item.active').css('background', colorTag);
-    });
+    // $(document).on('click', '.tagssection__colors span', function () {
+    //     let colorTag = $(this).attr("data-color");
+    //     $('.item.active').css('background', colorTag);
+    // });
 
     // close colors box
     $(document).click(function (e) {
@@ -472,36 +519,49 @@ $(document).ready(function () {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
-    
-    // $(document).on('mouseleave', '.item', function(){
-    //     console.log('sdsd');
-    //     $('tooltip').remove();
-    // });
-
     // -----------------------
     $(document).click(function (e) {
         let $target = $(e.target);
         if ($('.item').length) {
-            if (!$target.closest('.selectize-control').length && !$target.closest('.tagssection__colorbox').length && !$target.closest('.tagopen').length) {
-                $('.selectize-input').addClass('border');
+            if (!$target.closest('.taskmodal__detailswrap .selectize-control').length && !$target.closest('.taskmodal__detailswrap .tagssection__colorbox').length && !$target.closest('.tagopen').length && !$target.closest('.tasksbox').length) {
+                $('.taskmodal__detailswrap .selectize-input').addClass('border');
             } else {
-                $('.selectize-input').removeClass('border');
+                $('.taskmodal__detailswrap .selectize-input').removeClass('border');
             }
         } else {
-            $('.selectize-input').removeClass('border');
+            $('.taskmodal__detailswrap .selectize-input').removeClass('border');
         }
-       
+
     });
 
-    
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if (!$target.closest('.tagssection.tagssection__taskbox').length) {
+            $('.selectize-control').removeClass('show');
+        } 
+    });
+
+    $(document).on('click', '.addtagbtn__taskbox', function(){
+        $(this).parent('.tagssection.tagssection__taskbox').find('.selectize-control').addClass('show');
+        $(this).parent('.tagssection.tagssection__taskbox').find('.selectize-control .selectize-input input').focus();
+    });
 
 
 
 
 
+    // hide color list
+    $('.tagssection__colors span').click(function(){
+        $(this).parents('.tagssection__colors').hide();
+    });
 
+    $('.tasksbox__bottsect .tagssection__colors span').click(function(){
+        $(this).parents('.tagssection__taskbox').find('.selectize-control .selectize-input input').focus();
+    });
 
-
+    $('.tagsli .tagssection__colors span').click(function(){
+        $(this).parents('.tagsli').find('.tagssection .selectize-control .selectize-input input').focus();
+    });
 
 });
 
