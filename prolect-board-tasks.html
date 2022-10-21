@@ -8,6 +8,7 @@
     <title>Project Board (Tasks)</title>
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.min.css">
+    <link rel="stylesheet" href="css/lib/selectize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -294,6 +295,12 @@
                     <ul>
                         <li>
                             <a href="#">
+                                <img src="img/new/trash.svg" alt="trash">
+                                Trash
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
                                 <img src="img/help-icon.svg" alt="help">
                                 Help
                             </a>
@@ -312,7 +319,7 @@
                     <div class="boardprheader">
                         <div class="row">
                             <div class="col-lg-8 d-flex align-items-center col-md-5 flex-wrap order-md-1 order-2">
-                                <p class="boardprheader__title">Web design</p>
+                                <p class="boardprheader__title">Web design <span>Tags</span></p>
                                 <div class="boardprheader__inputbox position-relative">
                                     <input type="text">
                                     <button class="p-0">
@@ -551,6 +558,7 @@
                                 <div class="executor__name">
                                     WEB-1
                                     <span>3 Tasks</span>
+                                    <i>Hight</i>
                                 </div>
                             </div>
 
@@ -560,16 +568,41 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
+                                        <div class="tasksbox">
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Draw a purchase page 1</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <span class="tagtask" style="background: #6B83A8;">Hight</span>
+
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="addtasksect">
@@ -625,16 +658,46 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
+
+
+                                        <div class="tasksbox">
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Draw a purchase page 1</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <span class="tagtask" style="background: #6B83A8;">Hight</span>
+
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
+
+
+
+
                                     </div>
                                 </div>
                                 <div class="addtasksect">
@@ -688,17 +751,37 @@
                                 </div>
                             </div>
                             <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
-                                            <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
+                                <div class="tasksbox">
+                                    <p data-bs-toggle="modal" data-bs-target="#taskmodal">Draw a purchase page 1</p>
+                                    <div class="tasksbox__bottsect">
+                                        <div class="taskidwrapper">
+                                            <span class="taskid">
+                                                <i><img src="img/checkwhite.png" alt=""></i>
+                                                WEB-5
+                                            </span>
+                                            <span class="tagtask" style="background: #6B83A8;">Hight</span>
+
+                                            <div class="tagssection tagssection__taskbox">
+
+                                                <input type="text" class="demo-default tagsinput" value="">
+                                                <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                        alt="add tag"></label>
+                                                <div class="tagssection__colors">
+                                                    <div class="tagssection__colorbox">
+                                                        <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                        <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                        <span data-color="#F06937" style="background: #F06937;"></span>
+                                                        <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                        <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                        <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                        <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                        <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="usercirclewrapper">
+                                            <span class="usercircle red">ia</span>
                                         </div>
                                     </div>
                                 </div>
@@ -730,195 +813,6 @@
                         <div class="boardprbody__row d-flex">
                             <div class="exetutor">
                                 <div class="executor__name">
-                                    WEB-2
-                                    <span>4 Tasks</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- tasks -->
-                        <div class="boardprbody__row d-flex hide">
-                            <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
-                                            <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/addtask.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
-                                            <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/addtask.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
-                                            <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/addtask.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-
-                                    </div>
-                                </div>
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/addtask.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="boardcolumn">
-                                <div class="boardcolumn__topsect">
-                                    <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
-                                            <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/addtask.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- name -->
-                        <div class="boardprbody__row d-flex">
-                            <div class="exetutor">
-                                <div class="executor__name">
                                     Not assigned
                                     <span>10 Tasks</span>
                                 </div>
@@ -930,38 +824,113 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
+
+                                        
+
+                                        <div class="tasksbox">
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Draw a purchase page</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>To analyze the site</p>
+
+                                        <div class="tasksbox">
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">To analyze the site</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle orange">tp</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Uncountable noun when it means something we do that takes.</p>
+
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Uncountable noun when it means something we do that takes.</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle yellow">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
                                 <div class="addtasksect">
                                     <div class="addtasksect__btn text-center">
                                         <label for="addtarea">
@@ -987,36 +956,106 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Develop design</p>
+
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Develop design</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle yellow">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Find a room for a birthday party</p>
+
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Find a room for a birthday party</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle orange">tp</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Meeting with a client at the Voyage restaurant at 14:00</p>
+
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Meeting with a client at the Voyage restaurant at 14:00</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle red">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="addtasksect">
@@ -1044,14 +1083,36 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Draw a purchase page</p>
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Draw a purchase page</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle yellow">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1085,24 +1146,68 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Courses for designers in the field of development</p>
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Courses for designers in the field of development</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle orange">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Find a room for a birthday party</p>
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Find a room for a birthday party</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle orange">tp</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1132,14 +1237,36 @@
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="taskswrapper dragwrapper">
-                                        <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
-                                            <p>Courses for designers in the field of development</p>
+                                        <div class="tasksbox" >
+                                            <p data-bs-toggle="modal" data-bs-target="#taskmodal">Courses for designers in the field of development</p>
                                             <div class="tasksbox__bottsect">
-                                                <span class="taskid">
-                                                    <i><img src="img/checkwhite.png" alt=""></i>
-                                                    WEB-5
-                                                </span>
-                                                <span class="usercircle orange">ia</span>
+                                                <div class="taskidwrapper">
+                                                    <span class="taskid">
+                                                        <i><img src="img/checkwhite.png" alt=""></i>
+                                                        WEB-5
+                                                    </span>
+                                                    <div class="tagssection tagssection__taskbox">
+
+                                                        <input type="text" class="demo-default tagsinput" value="">
+                                                        <label class="addtagbtn__taskbox"><img src="img/new/plus.svg"
+                                                                alt="add tag"></label>
+                                                        <div class="tagssection__colors">
+                                                            <div class="tagssection__colorbox">
+                                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="usercirclewrapper">
+                                                    <span class="usercircle red">ia</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1274,7 +1401,7 @@
                                                 </p>
                                                 <p class="commentbox__descr">Hi, friends have a job</p>
                                                 <ul class="comment__sett">
-                                                    <li><a href="#">Change</a></li>
+                                                    <li><a href="#">Change to Edit</a></li>
                                                     <li><a href="#">Delete</a></li>
                                                 </ul>
                                             </div>
@@ -1307,6 +1434,16 @@
                     </div>
                     <div class="taskmodal__details">
                         <div class="taskmodal__detailswrap">
+                            <div class="taskmodal__icons">
+                                <ul class="taskmodal__iconslist">
+                                    <li><button class="taskmodal__icon"><img src="img/new/delete-ic.svg"
+                                                alt="delete"></button></li>
+                                    <li><button class="taskmodal__icon tagopen"><img src="img/new/tag-ic.svg"
+                                                alt="tags"></button></li>
+                                    <li><a href="#" class="taskmodal__icon"><img src="img/new/share-ic.svg"
+                                                alt="share"></a></li>
+                                </ul>
+                            </div>
                             <p class="taskmodal__details-title">Details</p>
                             <ul class="taskmodal__detailslist">
                                 <li class="d-flex align-items-center">
@@ -1380,6 +1517,71 @@
                                 <li class="d-flex align-items-center">
                                     <span class="rolerow">Updated:</span>
                                     <span class="roletasktime">June 20, 2022 at 6:05pm</span>
+                                </li>
+
+
+
+                                <li class="d-flex align-items-start tagsli">
+                                    <span class="rolerow">
+                                        <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Add Tags to group similar tasks for convenience">Tags:</span>
+                                    </span>
+                                    <div class="tagssection">
+
+                                        <input type="text" id="input-tags" class="demo-default" value="">
+                                        <label for="input-tags" class="addtagbtn"><img src="img/new/plus.svg"
+                                                alt="add tag"></label>
+                                        <div class="tagssection__colors">
+                                            <div class="tagssection__colorbox">
+                                                <span data-color="#A5236E" style="background: #A5236E;"></span>
+                                                <span data-color="#EB1E4B" style="background: #EB1E4B;"></span>
+                                                <span data-color="#F06937" style="background: #F06937;"></span>
+                                                <span data-color="#F5DC50" style="background: #F5DC50;"></span>
+                                                <span data-color="#3C5A82" style="background: #3C5A82;"></span>
+                                                <span data-color="#96C3D7" style="background: #96C3D7;"></span>
+                                                <span data-color="#E1FAFA" style="background: #E1FAFA;"></span>
+                                                <span data-color="#ECECEC" style="background: #ECECEC;"></span>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="tagssection__autocomplete">
+                                        <ul>
+                                            <li><span style="background: #F58220;">Hight</span></li>
+                                            <li><span style="background: #1467BB;">Medium</span></li>
+                                        </ul>
+                                    </div> -->
+
+
+
+
+
+
+
+
+
+                                        <!-- <div class="tagssection-wrapper">
+                                       <span>tag1</span><span>sdsdsd</span>
+                                        <input type="text">
+                                    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+
+
                                 </li>
                             </ul>
 
@@ -1699,6 +1901,7 @@
 
     <script src="js/lib/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="js/lib/selectize.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 
