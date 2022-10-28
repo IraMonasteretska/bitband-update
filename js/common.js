@@ -351,8 +351,6 @@ $(document).ready(function () {
     });
 
 
-
-
     // executor
 
     $('.exetutor').click(function () {
@@ -384,8 +382,6 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parents('.boardcolumn').insertBefore($(this).parents('.boardcolumn').prev());
     });
-
-
 
 
     // Tags
@@ -453,10 +449,6 @@ $(document).ready(function () {
             onItemRemove: function () {
                 $('.tooltip').tooltip('hide');
             },
-
-
-
-
             
             onItemAdd(value, $item) {
                 $($item).parents('.tagssection__taskbox').find('.tagssection__colors').show();
@@ -466,19 +458,8 @@ $(document).ready(function () {
                 $(colorSpan).click(function(){
                     let colorTag = $(this).attr("data-color");
                     $(this).parents('.tagssection__taskbox').find('.selectize-control .selectize-input input').prev().css('background', colorTag);
-                    // $($item).parents('.tagssection__taskbox').find('.tagssection__colors').hide();
-
-
                 })
-
-
-
-
             }
-
-
-
-            
         });
     }
 
@@ -486,11 +467,6 @@ $(document).ready(function () {
     $(document).on('click', '.selectize-dropdown-content', function () {
         $('.tagssection__colors').show();
     });
-
-    // $(document).on('click', '.tagssection__colors span', function () {
-    //     let colorTag = $(this).attr("data-color");
-    //     $('.item.active').css('background', colorTag);
-    // });
 
     // close colors box
     $(document).click(function (e) {
@@ -545,9 +521,6 @@ $(document).ready(function () {
         $(this).parent('.tagssection.tagssection__taskbox').find('.selectize-control').addClass('show');
         $(this).parent('.tagssection.tagssection__taskbox').find('.selectize-control .selectize-input input').focus();
     });
-
-
-
 
 
     // hide color list
