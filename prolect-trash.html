@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Board</title>
+    <title>Project Trash</title>
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.min.css">
     <link rel="stylesheet" href="css/lib/selectize.css">
@@ -33,6 +33,9 @@
                                 </div>
                             </div>
                         </div>
+
+
+
 
                         <div class="projectsgroup">
                             <div class="projectsgroup__list">
@@ -288,7 +291,7 @@
                 <!-- help -->
                 <div class="boardsidebar__help">
                     <ul>
-                        <li>
+                        <li class="active">
                             <a href="#">
                                 <img src="img/new/trash.svg" alt="trash">
                                 Trash
@@ -309,12 +312,13 @@
             </aside>
 
             <!-- right sect -->
-            <div class="boardrightsect enlarged">
+            <div class="boardrightsect enlarged greypage">
                 <div class="boardprcont__wrapper">
                     <div class="boardprheader">
                         <div class="row">
                             <div class="col-lg-8 d-flex align-items-center col-md-5 flex-wrap order-md-1 order-2">
-                                <p class="boardprheader__title">Web design</p>
+                                <p class="boardprheader__title">Web design <span>Trash <img
+                                            src="img/new/trash-title.svg" alt="trash icon"></span></p>
                                 <div class="boardprheader__inputbox position-relative">
                                     <input type="text">
                                     <button class="p-0">
@@ -382,19 +386,16 @@
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
                                     <p>To be completed 2 tasks</p>
-                                    <div class="headaddtask">
-                                        <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
-                                    </div>
                                     <div class="boardcolumn__dotsmenu">
                                         <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
+                                            <img src="img/new/dots-white.svg" alt="dots">
                                         </span>
                                         <div class="boardcolumn__list">
                                             <ul>
                                                 <li>
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
+                                                        <img src="img/new/restore.svg" alt="icon">
+                                                        Restore
                                                     </a>
                                                 </li>
                                                 <li class="boardcolumn__list-mob right">
@@ -412,21 +413,10 @@
                                     </div>
                                 </div>
                                 <div class="taskswrapper dragwrapper">
-                                    <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea id="addtoptarea1" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                     <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <a href="#" role="button" class="restorelink">
+                                            <img src="img/new/restore-task.svg" alt="restore icon">
+                                        </a>
                                         <p>Draw a purchase page</p>
                                         <div class="tasksbox__bottsect oneline">
                                             <div class="taskidwrapper">
@@ -462,6 +452,9 @@
                                     </div>
 
                                     <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <a href="#" role="button" class="restorelink">
+                                            <img src="img/new/restore-task.svg" alt="restore icon">
+                                        </a>
                                         <p>Draw a purchase page</p>
                                         <div class="tasksbox__bottsect oneline">
                                             <div class="taskidwrapper">
@@ -497,6 +490,9 @@
                                     </div>
 
                                     <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <a href="#" role="button" class="restorelink">
+                                            <img src="img/new/restore-task.svg" alt="restore icon">
+                                        </a>
                                         <p>Draw a purchase page</p>
                                         <div class="tasksbox__bottsect oneline">
                                             <div class="taskidwrapper">
@@ -529,27 +525,6 @@
                                                 <span class="usercircle red">ia</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <label for="addtarea">
-                                        <img src="img/plusic.svg" alt="img">
-                                        Add a task
-                                    </label>
-                                </div>
-                                <div class="addtasksect__field position-relative">
-                                    <textarea id="addtarea" placeholder="What need to be done?"></textarea>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span><img src="img/checkwhite.png" alt="img"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="#">Task</a></li>
-                                            <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -558,19 +533,16 @@
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
                                     <p>In Work 3 Tasks</p>
-                                    <div class="headaddtask">
-                                        <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
-                                    </div>
                                     <div class="boardcolumn__dotsmenu">
                                         <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
+                                            <img src="img/new/dots-white.svg" alt="dots">
                                         </span>
                                         <div class="boardcolumn__list">
                                             <ul>
                                                 <li>
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
+                                                        <img src="img/new/restore.svg" alt="icon">
+                                                        Restore
                                                     </a>
                                                 </li>
                                                 <li class="boardcolumn__list-mob right">
@@ -588,22 +560,10 @@
                                     </div>
                                 </div>
                                 <div class="taskswrapper dragwrapper">
-                                    <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea id="addtoptarea2" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-
                                     <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <a href="#" role="button" class="restorelink">
+                                            <img src="img/new/restore-task.svg" alt="restore icon">
+                                        </a>
                                         <p>Draw a purchase page</p>
                                         <div class="tasksbox__bottsect oneline">
                                             <div class="taskidwrapper">
@@ -636,27 +596,6 @@
                                                 <span class="usercircle red">ia</span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <label for="addtarea">
-                                        <img src="img/plusic.svg" alt="img">
-                                        Add a task
-                                    </label>
-                                </div>
-                                <div class="addtasksect__field position-relative">
-                                    <textarea id="addtarea2" placeholder="What need to be done?"></textarea>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span><img src="img/checkwhite.png" alt="img"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="#">Task</a></li>
-                                            <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -665,19 +604,16 @@
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
                                     <p>Ready</p>
-                                    <div class="headaddtask">
-                                        <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
-                                    </div>
                                     <div class="boardcolumn__dotsmenu">
                                         <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
+                                            <img src="img/new/dots-white.svg" alt="dots">
                                         </span>
                                         <div class="boardcolumn__list">
                                             <ul>
                                                 <li>
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
+                                                        <img src="img/new/restore.svg" alt="icon">
+                                                        Restore
                                                     </a>
                                                 </li>
                                                 <li class="boardcolumn__list-mob right">
@@ -695,64 +631,25 @@
                                     </div>
                                 </div>
                                 <div class="taskswrapper dragwrapper">
-                                    <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea id="addtoptarea3" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect">
-                                    <div class="addtasksect__btn text-center">
-                                        <label for="addtarea">
-                                            <img src="img/plusic.svg" alt="img">
-                                            Add a task
-                                        </label>
-                                    </div>
-                                    <div class="addtasksect__field position-relative">
-                                        <textarea id="addtarea3" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
                         </div>
                         <div class="boardcolumn">
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
                                     <p>Company</p>
-                                    <div class="headaddtask">
-                                        <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
-                                    </div>
+
                                     <div class="boardcolumn__dotsmenu">
                                         <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
+                                            <img src="img/new/dots-white.svg" alt="dots">
                                         </span>
                                         <div class="boardcolumn__list">
                                             <ul>
                                                 <li>
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
+                                                        <img src="img/new/restore.svg" alt="icon">
+                                                        Restore
                                                     </a>
                                                 </li>
                                                 <li class="boardcolumn__list-mob right">
@@ -770,22 +667,13 @@
                                     </div>
                                 </div>
                                 <div class="taskswrapper dragwrapper">
-                                    <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea id="addtoptarea4" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
 
 
                                     <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <a href="#" role="button" class="restorelink">
+                                            <img src="img/new/restore-task.svg" alt="restore icon">
+                                        </a>
                                         <p>Draw a purchase page</p>
                                         <div class="tasksbox__bottsect oneline">
                                             <div class="taskidwrapper">
@@ -822,45 +710,23 @@
 
                                 </div>
                             </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <label for="addtarea">
-                                        <img src="img/plusic.svg" alt="img">
-                                        Add a task
-                                    </label>
-                                </div>
-                                <div class="addtasksect__field position-relative">
-                                    <textarea id="addtarea4" placeholder="What need to be done?"></textarea>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span><img src="img/checkwhite.png" alt="img"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="#">Task</a></li>
-                                            <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="boardcolumn">
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
                                     <p>Aventini lab</p>
-                                    <div class="headaddtask">
-                                        <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
-                                    </div>
+
                                     <div class="boardcolumn__dotsmenu">
                                         <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
+                                            <img src="img/new/dots-white.svg" alt="dots">
                                         </span>
                                         <div class="boardcolumn__list">
                                             <ul>
                                                 <li>
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
+                                                        <img src="img/new/restore.svg" alt="icon">
+                                                        Restore
                                                     </a>
                                                 </li>
                                                 <li class="boardcolumn__list-mob right">
@@ -877,44 +743,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="taskswrapper dragwrapper">
-                                    <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea id="addtoptarea5" placeholder="What need to be done?"></textarea>
-                                        <div class="dropdown">
-                                            <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <span><img src="img/checkwhite.png" alt="img"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                <li><a class="dropdown-item" href="#">Task</a></li>
-                                                <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
-                                </div>
                             </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <label for="addtarea">
-                                        <img src="img/plusic.svg" alt="img">
-                                        Add a task
-                                    </label>
-                                </div>
-                                <div class="addtasksect__field position-relative">
-                                    <textarea id="addtarea5" placeholder="What need to be done?"></textarea>
-                                    <div class="dropdown">
-                                        <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <span><img src="img/checkwhite.png" alt="img"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="#">Task</a></li>
-                                            <li><a class="dropdown-item bug" href="#">Bug</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
