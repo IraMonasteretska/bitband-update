@@ -1,0 +1,67 @@
+.boardprheader__sort {
+    padding-right: 30px;
+}
+
+.teamroles.teamroles__header {
+    max-width: 212px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+
+    span {
+        justify-content: flex-start;
+        padding-left: 19px;
+        padding-right: 30px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        svg {
+            position: absolute;
+            right: 19px;
+        }
+    }
+
+    .teamroles__list {
+        z-index: 11;
+        right: initial;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.boardprheader__groupsect  {
+    max-width: 260px;
+    width: 100%;
+    flex: 0 0 260px;
+}
+
+.profilebox__list {
+    z-index: 9;
+}
+
+@media(max-width:1199.8px) {
+    .teamroles.teamroles__header .teamroles__list {
+        padding: 15px 10px;
+    }
+}
+
+@media(max-width:767.8px) {
+    .boardprheader__groupsect {
+        margin-bottom: 0;
+    }
+
+    .headsort {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .boardprheader__groupsect {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+}
