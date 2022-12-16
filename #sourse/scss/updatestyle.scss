@@ -1,0 +1,184 @@
+// error title
+.taskmodal__title__wrapper {
+    position: relative;
+    margin-bottom: 15px;
+
+    .taskmodal__title {
+        transition: 0.3s;
+        border-radius: 5px;
+        margin-bottom: 0;
+
+        &:focus {
+            padding-left: 10px;
+        }
+    }
+
+    .infobox {
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        display: none;
+        cursor: pointer;
+    }
+}
+
+.taskmodal__title__wrapper.error {
+
+
+    .taskmodal__errortext {
+        display: block;
+    }
+
+    .taskmodal__title {
+        border: 1px solid #BC4141;
+        padding-left: 10px;
+    }
+
+    .infobox {
+        display: inline-block;
+    }
+}
+
+.taskmodal__errortext {
+    font-weight: 325;
+    font-size: 13px;
+    line-height: 100%;
+    color: #BC4141;
+    margin-top: 6px;
+    display: none;
+}
+
+.infobox__text {
+    padding: 12px;
+    background: #fff;
+    border: 1.5px solid #DBDCE2;
+    width: 214px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    border-radius: 5px;
+    color: #BC4141;
+    font-size: 13px;
+    line-height: 145%;
+    font-weight: 325;
+    filter: drop-shadow(2px 4px 6px #d5d5d5);
+    display: none;
+    z-index: 8;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #fff;
+        position: absolute;
+        top: -8px;
+        right: 10px;
+    }
+}
+
+.infobox img:hover+.infobox__text {
+    display: inline-block;
+}
+
+// comments
+.openteskcontent__commenttextfield {
+    padding-top: 0;
+    margin-bottom: 20px;
+}
+
+.openteskcontent__commenttextfield textarea:placeholder-shown {
+    height: 40px;
+}
+
+.openteskcontent__commenttextfield textarea {
+    height: auto;
+    font-weight: 325;
+    transition: 0.3s;
+}
+
+.openteskcontent__commenttextfield .commentbtns {
+    display: none !important;
+}
+
+.openteskcontent__commenttextfield .commentbtns .orangebtn {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.openteskcontent__commenttextfield textarea:focus {
+    min-height: 102px;
+}
+
+.openteskcontent__commenttextfield textarea:focus+.commentbtns {
+    display: flex !important;
+}
+
+// description
+.adddescrtextfield {
+    transition: none;
+}
+
+.adddescrtextfield::placeholder {
+    color: #AAABB1;
+}
+
+.adddescrtextfield:focus {
+    height: 102px;
+}
+
+.openteskcontent__description {
+    padding-bottom: 20px;
+
+    .commentbtns {
+        display: none !important;
+
+        a {
+            margin-right: 15px;
+            width: 143px;
+            height: 38px;
+            font-size: 14px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.openteskcontent__description .adddescrtextfield {
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.openteskcontent__description .adddescrtextfield:focus+.commentbtns {
+    display: flex !important;
+    margin-top: 10px;
+}
+
+.sidebarprojbox .projicon {
+    background: transparent;
+}
+
+
+
+@media(max-width:1199.8px) {
+    .taskmodal__title__wrapper .infobox {
+        top: 5px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .taskmodal__title__wrapper .infobox {
+        top: 3px;
+    }
+
+}
+
+
+
+
+
+

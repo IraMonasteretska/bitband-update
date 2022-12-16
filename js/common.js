@@ -579,7 +579,18 @@ $(document).ready(function () {
 
 
 
-
 });
 
 
+// Update textarea height
+var textarea = document.querySelector('.adddescrtextfield');
+
+textarea.addEventListener('keydown', autosize);
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
