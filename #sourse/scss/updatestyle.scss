@@ -129,8 +129,14 @@
     height: 102px;
 }
 
+.openteskcontent__comments {
+    .openteskcontent__description {
+        padding-bottom: 25px;
+    }
+}
+
 .openteskcontent__description {
-    padding-bottom: 20px;
+    padding-bottom: 0;
 
     .commentbtns {
         display: none !important;
@@ -162,6 +168,63 @@
     background: transparent;
 }
 
+.commentwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.openteskcontent__description .commentwrapper .commentbox__img {
+    width: 100%;
+    max-width: 33px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33px;
+    flex: 0 0 33px;
+    order: 1;
+    display: none;
+
+    .commentbox__ava {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+        overflow: hidden;
+        font-size: 13.16px;
+        line-height: 160%;
+        color: #fff;
+        font-weight: 500;
+    }
+}
+
+.openteskcontent__description .commentwrapper .adddescrtextfield {
+    width: 100%;
+    // max-width: calc(100% - 50px);
+    // flex: 0 0 calc(100% - 50px);
+    max-width: 100%;
+    flex: 0 0 100%;
+    order: 2;
+}
+
+.openteskcontent__description .commentwrapper .adddescrtextfield:focus {
+ max-width: calc(100% - 50px);
+    flex: 0 0 calc(100% - 50px);
+
+    &+.commentbox__img {
+        display: block;
+    }
+
+    &~.commentbtns  {
+        display: block !important;
+    }
+    
+}
+
+.openteskcontent__description .commentwrapper .commentbtns {
+    order: 3;
+    padding-left: 50px;
+    margin-top: 15px;
+}
 
 
 @media(max-width:1199.8px) {
@@ -175,10 +238,13 @@
         top: 3px;
     }
 
+    .openteskcontent__description .commentwrapper .commentbtns a {
+        width: 115px;
+    }
 }
 
-
-
-
-
-
+@media(max-width:360.8px) {
+    .openteskcontent__description .commentwrapper .commentbtns a {
+        width: 95px;
+    }
+}
