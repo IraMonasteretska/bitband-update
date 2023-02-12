@@ -46,18 +46,18 @@ $(document).ready(function () {
 
     // rename project
 
-    $('.renamebtn').click(function (e) {
-        e.preventDefault();
-        $(this).parents('.projectsgroup__listwrapper').find('.projrenamesect').addClass('show');
-        $('.projsettlist').removeClass('show');
-    });
+    // $('.renamebtn').click(function (e) {
+    //     e.preventDefault();
+    //     $(this).parents('.projectsgroup__listwrapper').find('.projrenamesect').addClass('show');
+    //     $('.projsettlist').removeClass('show');
+    // });
 
-    $(document).click(function (e) {
-        let $target = $(e.target);
-        if (!$target.closest('.projrenamesect ').length && !$target.closest('.renamebtn ').length) {
-            $('.projrenamesect ').removeClass('show');
-        }
-    });
+    // $(document).click(function (e) {
+    //     let $target = $(e.target);
+    //     if (!$target.closest('.projrenamesect ').length && !$target.closest('.renamebtn ').length) {
+    //         $('.projrenamesect ').removeClass('show');
+    //     }
+    // });
 
 
     // user menu (settings/logout..)
@@ -594,3 +594,9 @@ function autosize(){
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
   },0);
 }
+
+
+// close notification
+$('.invnotif__close').click(function(){
+    $(this).parent('.invitation_notification').fadeOut();
+});

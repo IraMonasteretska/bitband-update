@@ -57,7 +57,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="renamebtn">
+                                                <a href="#" class="renamebtn" data-bs-toggle="modal"
+                                                    data-bs-target="#renameproj">
                                                     <img src="img/rename-icon.svg" alt="icon">
                                                     Rename
                                                 </a>
@@ -70,14 +71,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="projrenamesect">
+                                    <!-- <div class="projrenamesect">
                                         <button>
                                             <span>
                                                 <img src="img/project-icon.svg" alt="icon">
                                             </span>
                                         </button>
                                         <input type="text" value="Web design">
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="projcolors">
                                         <div class="projcolors__color"
                                             style="background: linear-gradient(303.81deg, #F5D320 -4.76%, #F58220 107.44%);"
@@ -136,7 +137,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="renamebtn">
+                                                <a href="#" class="renamebtn" data-bs-toggle="modal"
+                                                    data-bs-target="#renameproj">
                                                     <img src="img/rename-icon.svg" alt="icon">
                                                     Rename
                                                 </a>
@@ -149,14 +151,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="projrenamesect">
+                                    <!-- <div class="projrenamesect">
                                         <button>
                                             <span>
                                                 <img src="img/project-icon.svg" alt="icon">
                                             </span>
                                         </button>
                                         <input type="text" value="Web design">
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="projcolors">
                                         <div class="projcolors__color"
                                             style="background: linear-gradient(303.81deg, #F5D320 -4.76%, #F58220 107.44%);"
@@ -215,7 +217,8 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="renamebtn">
+                                                <a href="#" class="renamebtn" data-bs-toggle="modal"
+                                                    data-bs-target="#renameproj">
                                                     <img src="img/rename-icon.svg" alt="icon">
                                                     Rename
                                                 </a>
@@ -228,14 +231,14 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="projrenamesect">
+                                    <!-- <div class="projrenamesect">
                                         <button>
                                             <span>
                                                 <img src="img/project-icon.svg" alt="icon">
                                             </span>
                                         </button>
                                         <input type="text" value="Web design">
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="projcolors">
                                         <div class="projcolors__color"
                                             style="background: linear-gradient(303.81deg, #F5D320 -4.76%, #F58220 107.44%);"
@@ -302,7 +305,8 @@
                 <!-- help -->
                 <div class="boardsidebar__help">
                     <ul>
-                        <li class="active">
+                        <!-- active -->
+                        <li class="">
                             <a href="#">
                                 <img src="img/new/trash.svg" alt="trash">
                                 Trash
@@ -1336,9 +1340,10 @@
                                         <p class="title">Comments</p>
                                         <div class="commentwrapper">
                                             <textarea class="adddescrtextfield"
-                                            placeholder="Add a text description..."></textarea>
+                                                placeholder="Add a text description..."></textarea>
                                             <div class="commentbox__img">
-                                                <div class="commentbox__ava d-flex align-items-center justify-content-center" style="background: #FB5C5C;">
+                                                <div class="commentbox__ava d-flex align-items-center justify-content-center"
+                                                    style="background: #FB5C5C;">
                                                     ia
                                                 </div>
                                             </div>
@@ -1347,7 +1352,7 @@
                                                 <a href="#" class="orangebtn white">Cancel</a>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
 
                                     <div class="comments-wrap">
@@ -1777,6 +1782,61 @@
             </div>
         </div>
     </div>
+
+    <!-- edit pr name -->
+    <div class="modal fade remaneproject" id="renameproj" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="littmodal__content text-center">
+                    <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="littmodal__mainpic" src="img/new/editicon.svg" alt="img">
+                    <p class="title">Rename project</p>
+                    <p class="descr">
+                        Are you sure you want to rename this project?
+                    </p>
+                    <div class="littmodal__btns d-flex align-items-center justify-content-between">
+                        <a href="#" class="orangebtn white" data-bs-dismiss="modal">No</a>
+                        <a href="#" class="orangebtn" data-bs-dismiss="modal" data-bs-toggle="modal"
+                            data-bs-target="#invitationsend">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade invitationsend" id="invitationsend" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="littmodal__content text-center">
+                    <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="littmodal__mainpic" src="img/new/invitationsend.svg" alt="img">
+                    <p class="title">Invitation sent</p>
+                    <p class="descr">
+                        The invitation has been sent to the user
+                    </p>
+                    <div class="littmodal__btns d-flex align-items-center justify-content-center">
+                        <a href="#" class="orangebtn" data-bs-dismiss="modal">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="invitation_notification">
+        <button class="invnotif__close"><img src="img/new/notification-close.svg" alt="close"></button>
+        <div class="invnotif__icon">
+            <img src="img/new/notification-icon.svg" alt="img">
+        </div>
+        <div class="invnotif__text">
+            <p>
+                The invitation has been sent to the user
+            </p>
+        </div>
+    </div>
+
+
 
 
 

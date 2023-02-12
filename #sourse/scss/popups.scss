@@ -1,0 +1,103 @@
+.remaneproject  {
+    .modal-dialog {
+        max-width: 411px;
+    }
+    .littmodal__content {
+        padding: 40px 33px 35px 33px;
+    }
+}
+
+.invitationsend {
+    .modal-dialog {
+        max-width: 411px;
+    }
+    .littmodal__content {
+        padding: 40px 33px 35px 33px;
+    }
+
+    .littmodal__btns  {
+        justify-content: center;
+    }
+}
+
+.invitation_notification {
+    position: fixed;
+    left: 20px;
+    bottom: 25px;
+    width: 292px;
+    padding: 28px 28px 28px 20px;
+    background: #E7EFFD;
+    backdrop-filter: blur(7.99733px);
+    border-radius: 8px;
+    z-index: 35;
+    display: flex;
+    align-items: center;
+
+    .invnotif__icon {
+        width: 100%;
+        max-width: 30px;
+        flex: 0 0 30px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .invnotif__text {
+        width: 100%;
+        max-width: calc(100% - 30px);
+        flex: 0 0 calc(100% - 30px);
+        padding-left: 20px;
+
+        p {
+            margin: 0;
+            color: #185DAF;
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+
+    .invnotif__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        padding: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+
+        img {
+             vertical-align: top;
+        }
+    }
+}
+
+@media(max-width:575.8px) {
+    .invitation_notification {
+        left: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        max-width: 300px;
+    }
+
+    .remaneproject .modal-dialog,
+    .invitationsend .modal-dialog {
+        max-width: calc(100% - 30px);
+    }
+
+}
+
+@media(max-width:360.8px) {
+    .remaneproject .littmodal__content,
+    .invitationsend .littmodal__content {
+        padding: 30px 10px 30px 10px;
+    }
+
+
+
+
+}
