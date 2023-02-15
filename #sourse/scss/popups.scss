@@ -1,9 +1,30 @@
 .remaneproject  {
     .modal-dialog {
-        max-width: 411px;
+        max-width: 461px;
     }
     .littmodal__content {
-        padding: 40px 33px 35px 33px;
+        padding: 40px 40px 35px 40px;
+
+        .warningtext {
+            color: #BC4141;
+            font-size: 13px;
+            line-height: 150%;
+            margin: 12px 0 0 0;
+            font-weight: 500;
+            position: relative;
+
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                background: url('../img/new/warning.svg') no-repeat center / 100% 100%;
+                vertical-align: middle;
+                margin-right: 5px;
+                margin-top: -4px;
+            }
+        }
     }
 }
 
@@ -87,6 +108,11 @@
     .remaneproject .modal-dialog,
     .invitationsend .modal-dialog {
         max-width: calc(100% - 30px);
+    }
+
+    .remaneproject .littmodal__content,
+    .invitationsend .littmodal__content {
+        padding: 40px 30px 30px 30px;
     }
 
 }
