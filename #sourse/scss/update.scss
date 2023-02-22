@@ -571,7 +571,18 @@
     }
     
 }
+// -----------
+.projectsgroup {
+    z-index: 33;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+}
 
+@media(max-width:575.8px) {
+    .projectsgroup {
+        max-height: calc(100vh - 130px);
+    }
+}
 
 @media(min-width:768px) {
 
